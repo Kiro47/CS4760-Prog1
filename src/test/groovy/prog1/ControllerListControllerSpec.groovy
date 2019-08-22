@@ -11,8 +11,11 @@ class ControllerListControllerSpec extends Specification implements ControllerUn
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test 200 response"() {
+        when:
+            controller.index()
+        then:
+            status == 200
     }
 }
+
