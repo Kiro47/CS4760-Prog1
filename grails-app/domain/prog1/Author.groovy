@@ -6,4 +6,9 @@ class Author {
     static hasMany = [books: Book]
     static constraints = {
     }
+
+    String toString()
+    {
+        "${name}"
+    }
 }

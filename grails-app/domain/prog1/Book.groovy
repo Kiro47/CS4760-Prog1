@@ -9,4 +9,9 @@ class Book {
 
     static constraints = {
     }
+
+    String toString()
+    {
+        "${title}"
+    }
 }
