@@ -3,6 +3,8 @@
 <head>
     <title><g:layoutTitle default="Book Store"/></title>
     <asset:stylesheet src="application.css"/>
+    <asset:stylesheet src="myStyles.css"/>
+    <asset:stylesheet src="myStyles.css"/>
 
     <g:layoutHead/>
 </head>

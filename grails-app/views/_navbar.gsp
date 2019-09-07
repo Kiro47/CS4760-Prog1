@@ -11,7 +11,8 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
             </button>
-            <a href="/${grails.util.Metadata.current.getApplicationName()}">
+            <!--<a href="/${grails.util.Metadata.current.getApplicationName()}">-->
+            <li><a href="#">Books</a></li>
                 <div class="navbar-brand title-name">Book Store</div>
             </a>
        </div><!-- /.navbar-header -->
@@ -21,6 +22,8 @@
             <ul class="nav navbar-nav navbar-right">
                   <li><a href="#">Books</a></li>
                   <li><a href="#">Authors</a></li>
+                  <li><g:link controller="Books">Books</g:link></li>
+                  <li><g:link controller="Authors">Authors</g:link></li>
             </ul>
        </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

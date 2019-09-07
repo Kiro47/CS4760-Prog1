@@ -8,7 +8,7 @@
 <body>
 <div class="jumbotron jumb-margin">
     <div class="container">
-        <h1>Book Store</h1>
+        <h1 class="text-center">Book Store</h1>
     </div>
 </div>
 
