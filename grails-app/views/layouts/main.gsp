@@ -24,9 +24,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+<<<<<<< Updated upstream
                 <a class="navbar-brand" href="/${grails.util.Metadata.current.getApplicationName()}/">
                     <div class="navbar-brand title-name">Book Store</div>
+<!--
+                <a class="navbar-brand" href="/#">
+		            <asset:image src="grails.svg" alt="Grails Logo"/>
+-->
                 </a>
+                <sec:ifLoggedIn><li><a href="#"><sec:username/></a></li></sec:ifLoggedIn>
+                <li>
+                    <sec:ifLoggedIn><g:link controller="Logout">log out</g:link></sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn><g:link controller="login" action="auth">Login</g:link></sec:ifNotLoggedIn>
+                </li>
             </div>
             <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
                 <ul class="nav navbar-nav navbar-right">
