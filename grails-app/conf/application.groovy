@@ -15,6 +15,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
 	[pattern: '/**/favicon.ico', access: ['permitAll']],
+	[pattern: '/dbconsole',      access: ['ROLE_ADMIN']],
 
 	// Added 3.3
 	[pattern: '/books/**',       access: ['permitAll']],
@@ -62,6 +63,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
 	[pattern: '/**/favicon.ico', access: ['permitAll']],
+	[pattern: '/dbconsole',      access: ['ROLE_ADMIN']],
 
 	// Added 3.3
 	[pattern: '/books/**',       access: ['permitAll']],

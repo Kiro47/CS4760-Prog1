@@ -98,4 +98,18 @@ class BookController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    def debugCover = true
+
+    def showCover(){
+        println "In showCover"
+        if(debugCover){
+            println " "
+            println "In showCover"
+            println "params.id: "+params.id
+        }
+        def book = Book.get(params.id)
+        response.outputStream << book.cover
+        response.outputStream.flush()
+    }
 }

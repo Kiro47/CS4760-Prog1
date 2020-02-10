@@ -19,6 +19,9 @@ class BooksController {
             def bkAuthor = [:]
             bkAuthor.put('title', bks[i].title)
             bkAuthor.put('author', Author.get(bks[i].authorId).name)
+            bkAuthor.put('id', bks[i].id)
+            bks[i].cover != null ? bkAuthor.put("cover", true) : bkAuthor.put("cover", false)
+
             bkList << bkAuthor
         }
         if(debugIndex){

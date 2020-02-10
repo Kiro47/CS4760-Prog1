@@ -25,9 +25,21 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.book}" method="POST">
+            <g:form resource="${this.book}" method="POST" enctype="multipart/form-data">
                 <fieldset class="form">
-                    <f:all bean="book"/>
+                    <g:uploadForm resource="${this.book}" method="POST">
+                        <fieldset class="form">
+                            <f:with bean="book">
+                                <f:field property="title"/>
+                                <f:field property="author"/>
+                                <f:field property="publishYear"/>
+                                <f:field property="cover"/>
+                            </f:with>
+                        </fieldset>
+                        <fieldset class="buttons">
+                            <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                        </fieldset>
+                    </g:uploadForm>
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
